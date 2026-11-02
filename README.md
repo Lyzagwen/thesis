@@ -86,4 +86,5 @@ components/           sidebar/nav, charts (Recharts), topic cards, upload zone, 
 lib/                  types, stopwords, cleaning, LDA, BERTopic-port, coherence,
                        labels, analysis orchestrator, AI summary helpers, context store
 tests/smoke.ts        pipeline smoke test (npx tsc + node)
+tests/upload.test.ts  CSV/JSON upload-parser test
 ```

@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
-import { AnalysisState, CleaningStats, CleanedThesis, Gap, ModelResult, Thesis, TrendItem, ValidationEntry } from "./types";
+import { CleaningStats, CleanedThesis, Gap, ModelResult, Thesis, TrendItem, ValidationEntry } from "./types";
 import { SAMPLE_THESES } from "./sampleData";
 import { cleanCorpus } from "./cleaning";
 import { runPipeline } from "./analysis";

@@ -24,9 +24,7 @@ export function UploadZone({ onUploaded }: { onUploaded: (theses: Thesis[]) => v
   };
 
   const downloadTemplate = () => {
-    const csv =
-      'title,abstract,year,author\n"Sample: AI-powered Attendance Tracker","This thesis builds an AI attendance tracker.","2024","Jane Doe"\n';
-    const blob = new Blob([csv], { type: "text/csv" });
+    const blob = new Blob([TEMPLATE_CSV], { type: "text/csv" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;

@@ -5,6 +5,7 @@ import { useStore } from "@/lib/store";
 import { ModelToggle } from "@/components/ModelToggle";
 import { Card, EmptyState, PageHeader, Spinner } from "@/components/ui";
 import { localTopicSummary, requestAISummary } from "@/lib/aiSummary";
+import { copyText } from "@/lib/upload";
 import { Topic } from "@/lib/types";
 
 export default function SummariesPage() {
@@ -52,8 +53,8 @@ export default function SummariesPage() {
     }
   };
 
-  const copy = () => {
-    if (summary) void navigator.clipboard.writeText(summary.text);
+  const copy = async () => {
+    if (summary) await copyText(summary.text);
   };
 
   return (
